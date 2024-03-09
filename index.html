@@ -23,9 +23,10 @@
                     <i class="fa-solid fa-bars"></i>
                 </div>
                 <ul role="list">
-                    <li><a href="">About</a></li>
-                    <li><a href="">Projects</a></li>
-                    <li><a href="">Contact</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>  
             </div>
         </div>
@@ -56,15 +57,14 @@
             </div>
         </div>
     </section>
-    <section class="about grid-section">
+    <section id="about" class="about grid-section">
         <div class="container">
             <div class="content">
-
                 <h2>About Sashana</h2>
                 <p>During my teenage years, I was set on becoming a lawyer. So in high school, I did a course in pre-law studies (while also completing an Associate’s Degree in General Studies) and earned a Diploma at the end of 2 years. My career did not take me where I wanted (bummer!) so I ended up studying Business Administration as a back up plan. 
                     <!-- Though years later, I was able to work as a Secretary within the Police Force.  -->
                 </p>
-                <p>My journey into tech began around 2020. Fast-forward today, I got my first Software Engineer internship in August 2023 through the Microsoft Leap as a Service Programme.</p>
+                <p>My interest in coding began in 2020 when I decided to try building a website from scratch. Fast-forward today, I got my first Software Engineer internship in August 2023 through the Microsoft Leap as a Service Programme.</p>
                 <p>Most of my years learning has been spent on the frontend but my main focus these days is developing my backend skills. </p>
                 <p>When I’m not coding, I’m usually watching Kdrama, playing video games or hanging out with my husband watching anime together.</p>
             </div>
@@ -73,7 +73,7 @@
             <img src="./assets/plant.png" alt="">
         </div>
     </section>
-    <section class="credentials grid-section">
+    <section id="skills" class="credentials grid-section">
         <div class="container">
             <div class="content">
                 <h2>Credentials</h2>
@@ -103,7 +103,8 @@
                                     <li>JavaScript</li>
                                     <li>Asp.Net</li>
                                     <li>Razor Pages</li>
-                                    <li>HTML & CSS</li>
+                                    <li>HTML</li>
+                                    <li>CSS/Sass/Bootstrap</li>
                                     <li>Git</li>
                                 </ul> 
                             </div> 
@@ -116,7 +117,7 @@
             <img src="./assets/plant.png" alt="">
         </div>
     </section>
-    <section class="work">
+    <section id="projects" class="work">
         <div class="container">
             <div class="content">
                 <h2>My Best Work</h2>
@@ -149,9 +150,34 @@
             </div>
         </div>
     </section>
-    <section class="contact">
-        <p>Get in Touch</p>
-        <form action=""></form>
+    <section id="contact" class="contact grid-section">
+        <div class="container">
+            <div class="content">
+                <h3>Get in Touch</h3>
+                <p>Looking to work together or just want to say hi?</p>
+                <p>Feel free to send me a message</p>
+                <form action="">
+                    <div class="form-wrapper">
+                        <div class="details">
+                            <label for="">Name</label>
+                            <input type="text">
+                        </div>
+                        <div class="details">
+                            <label for="">Email</label>
+                            <input type="email" name="" id="">
+                        </div>
+                        <div class="details textarea-container">
+                            <label for="">Message</label>
+                            <textarea name="" id="" placeholder="I'd love to hear from you..."></textarea>
+                        </div>
+                        <button>Send message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+         <div class="flower-img">
+            <img src="./assets/plant.png" alt="">
+        </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 
