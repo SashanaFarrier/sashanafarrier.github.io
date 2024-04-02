@@ -94,19 +94,23 @@ textarea:not([rows]) {
   scroll-margin-block: 5ex;
 }
 
+.header-bar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 5px;
+    background-color: var(--accent-1);
+    border-radius: 2px;
+    z-index: 999;
+    /* transition: width .2s ease; */
+}
+
 header {
     background-color: var(--black);
     height: 10vh;
     overflow: hidden;
-}
-
-header::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 5px;
-    background-color: var(--accent-1);
+    z-index: 100;
+    transition: all .2s ease;
 }
 
 .header-content,
@@ -192,7 +196,8 @@ section p {
 section.hero {
     height: 90vh;
     /* overflow-y: visible; */
-    z-index: 999;
+    z-index: 99;
+    background: linear-gradient(122deg, rgba(107, 99, 254, 1) 0%, rgba(138, 83, 251, 1) 5%, rgba(0, 0, 0, 1) 20%);
 }
 
 
@@ -258,7 +263,7 @@ section.hero {
     }
 }
 
-.hero::after {
+/* .hero::after {
     content: "";
     position: absolute;
     inset: 0;
@@ -267,7 +272,7 @@ section.hero {
     border-radius: 50%;
     filter: blur(150px);
     opacity: 0.5;
-}
+} */
 
 .code-img-container {
     width: 100%;
@@ -357,12 +362,14 @@ section.credentials {
 .credentials::after {
     content: "";
     position: absolute;
-    width: 50%;
+    inset: 0;
+    background: radial-gradient(circle, rgba(107, 99, 254, 1) 0%, rgba(138, 83, 251, 1) 38%, rgba(0, 0, 0, 1) 100%);
+    /* width: 50%;
     height: 50%;
     background-image: radial-gradient(var(--accent-1), var(--accent-2));
     border-radius: 50%;
-    filter: blur(250px);
-    opacity: 0.5;
+    filter: blur(250px); */
+    opacity: 0.1;
 }
 
 section.credentials .education,
@@ -470,12 +477,14 @@ section.credentials .skills {
 .contact::after {
     content: "";
     position: absolute;
-    width: 50%;
+    inset: 0;
+    background: radial-gradient(circle, rgba(107, 99, 254, 1) 0%, rgba(138, 83, 251, 1) 38%, rgba(0, 0, 0, 1) 100%);
+    /* width: 50%;
     height: 50%;
     background-image: radial-gradient(var(--accent-1), var(--accent-2));
     border-radius: 50%;
-    filter: blur(250px);
-    opacity: 0.5;
+    filter: blur(250px); */
+    opacity: 0.15;
     z-index: -1;
 }
 

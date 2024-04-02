@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="header-bar"></div>
     <header>
         <div class="container">
             <div class="header-content">
@@ -24,8 +25,8 @@
                 </div>
                 <ul role="list">
                     <li><a href="#about">About</a></li>
+                    <li><a href="#credentials">Credentials</a></li>
                     <li><a href="#projects">Projects</a></li>
-                    <li><a href="#skills">Skills</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>  
             </div>
@@ -73,7 +74,7 @@
             <img src="./assets/plant.png" alt="">
         </div>
     </section>
-    <section id="skills" class="credentials grid-section">
+    <section id="credentials" class="credentials grid-section">
         <div class="container">
             <div class="content">
                 <h2>Credentials</h2>
@@ -101,7 +102,7 @@
                                     <li>C#</li>
                                     <li>C</li>
                                     <li>JavaScript</li>
-                                    <li>Asp.Net</li>
+                                    <li>.Net Core</li>
                                     <li>Razor Pages</li>
                                     <li>HTML</li>
                                     <li>CSS/Sass/Bootstrap</li>
@@ -125,10 +126,10 @@
                     <div class="work-1">
                         <div class="header">
                             <span>01</span>
-                            <h4>Password Generator</h4>
+                            <h4>E&S Power System Solutions</h4>
                         </div>
-                            <img src="./assets/password-generator.jpg" alt="">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, consequuntur! Expedita amet excepturi nemo molestias in! Eaque molestiae dicta exercitationem voluptatem sed consectetur esse ducimus, nesciunt repellendus quis minus hic!</p>
+                            <img src="./assets/E&S website mockup.png" alt="">
+                            <p>I was hired by a local company to carry out their digital marketing. As part of my role, I was required to build a website. I came up with a clean and simple responsive design that represents the company. </p>
                     </div>
                     <div class="work-2">
                         <div class="header">
@@ -138,13 +139,16 @@
                             <img src="./assets/password-generator.jpg" alt="">
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, consequuntur! Expedita amet excepturi nemo molestias in! Eaque molestiae dicta exercitationem voluptatem sed consectetur esse ducimus, nesciunt repellendus quis minus hic!</p>
                     </div>
-                    <div class="work-1">
+                    <div class="work-3">
                         <div class="header">
                             <span>03</span>
-                            <h4>IP Address Tracker</h4>
+                            <h4>Personal Website</h4>
                         </div>
-                            <img src="./assets/password-generator.jpg" alt="">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, consequuntur! Expedita amet excepturi nemo molestias in! Eaque molestiae dicta exercitationem voluptatem sed consectetur esse ducimus, nesciunt repellendus quis minus hic!</p>
+                        <div class="img-container">
+                             <img src="./assets/personal website mockup.png" alt=""> 
+                        </div>
+                            <p>This is the second iteration of my personal  website that I build in 2024. It's a simple, reponsive one-pager designed and developed with a conscious effort to showcase my frontend skills.
+                            </p>
                     </div>
                 </div>
             </div>
@@ -159,16 +163,16 @@
                 <form action="">
                     <div class="form-wrapper">
                         <div class="details">
-                            <label for="">Name</label>
-                            <input type="text">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" id="name">
                         </div>
                         <div class="details">
-                            <label for="">Email</label>
-                            <input type="email" name="" id="">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email">
                         </div>
                         <div class="details textarea-container">
-                            <label for="">Message</label>
-                            <textarea name="" id="" placeholder="I'd love to hear from you..."></textarea>
+                            <label for="message">Message</label>
+                            <textarea name="message" id="message" placeholder="I'd love to hear from you..."></textarea>
                         </div>
                         <button>Send message</button>
                     </div>
