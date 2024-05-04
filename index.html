@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="globalStyles.css">
 </head>
 <body>
     <div class="header-bar"></div>
@@ -36,13 +37,16 @@
         <div class="container">
             <div class="content-wrapper">
                 <div class="content">
-                    <h1>Hi, I'm 
+                    <p>Software Engineer</p>
+                    <h1 class="accent">Sashana Farrier.</h1>
+                    <p class="headline-text">I craft pixel-perfect, responsive, and accessible web applications. Currently, I'm focused on leveraging the power of .NET Core to bring innovative projects to life.</p>
+                    <!-- <h1>Hi, I'm 
                         <span class="accent">Sashana Farrier.</span>
                         <span>I'm a 
-                            <span class="accent">Software Engineer.</span> </span></h1>
+                            <span class="accent">Software Engineer.</span> </span></h1> -->
                             <div class="cta">
                                 <span>&#x7b;</span>
-                                <span class="hire-me-text">Hire me</span>
+                                <a href="#projects" class="view-work-btn">My work</a>
                                 <span>&#x7d;</span>
                             </div>
                 </div> 
@@ -62,12 +66,12 @@
         <div class="container">
             <div class="content">
                 <h2>About Sashana</h2>
-                <p>During my teenage years, I was set on becoming a lawyer. So in high school, I did a course in pre-law studies (while also completing an Associate’s Degree in General Studies) and earned a Diploma at the end of 2 years. My career did not take me where I wanted (bummer!) so I ended up studying Business Administration as a back up plan. 
-                    <!-- Though years later, I was able to work as a Secretary within the Police Force.  -->
-                </p>
-                <p>My interest in coding began in 2020 when I decided to try building a website from scratch. Fast-forward today, I got my first Software Engineer internship in August 2023 through the Microsoft Leap as a Service Programme.</p>
-                <p>Most of my years learning has been spent on the frontend but my main focus these days is developing my backend skills. </p>
-                <p>When I’m not coding, I’m usually watching Kdrama, playing video games or hanging out with my husband watching anime together.</p>
+                <!-- <p>During my teenage years, I was set on becoming a lawyer. So in high school, I did a course in pre-law studies (while also completing an Associate’s Degree in General Studies) and earned a Diploma at the end of 2 years. My career did not take me where I wanted (bummer!) so I ended up studying Business Administration as a back up plan. 
+                 
+                </p> -->
+                <p>My interest in coding began in 2020 when I tried building a website from scratch. Fast-forward today, I got my first Software Engineer internship in August 2023 through the Microsoft Leap as a Service Programme. <a href="https://jamaica.loopnews.com/content/first-cohort-immersed-microsoft-leap-service" target="_blank">Read about it here</a>.</p>
+                <p>Most of my learning has been spent on the frontend but my main focus these days is developing my backend skills, utilizing .Net Core and Entity Framework Core.</p>
+                <p>When I’m not coding, I’m usually watching Kdrama, playing video games or hanging out with my husband watching anime.</p>
             </div>
         </div>
         <div class="flower-img">
@@ -104,9 +108,11 @@
                                     <li>JavaScript</li>
                                     <li>.Net Core</li>
                                     <li>Razor Pages</li>
+                                    <li>Entity Framework Core</li>
                                     <li>HTML</li>
                                     <li>CSS/Sass/Bootstrap</li>
                                     <li>Git</li>
+                                    <li>Mailkit</li>
                                 </ul> 
                             </div> 
                         </div>
@@ -128,8 +134,9 @@
                             <span>01</span>
                             <h4>E&S Power System Solutions</h4>
                         </div>
-                            <img src="./assets/E&S website mockup.png" alt="">
-                            <p>I was hired by a local company to carry out their digital marketing. As part of my role, I was required to build a website. I came up with a clean and simple responsive design that represents the company. </p>
+                            <img src="./assets/mockup-1.png" alt="project image">
+                            <p>E&S Power System Solutions is a local solar energy company. I built their website from scratch, including design using .Net Core.</p>
+                            <a class="case-study-btn" href="/case-study-1.html">Case Study</a>
                     </div>
                     <div class="work-2">
                         <div class="header">
