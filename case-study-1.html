@@ -30,21 +30,24 @@
         </div>
     </header>
        <section>
-        <div class="container">
+        <div class="project-title">
             <h1>E&S Power System Solutions</h1>
-            <a href="eandspowersystemsolutions.com" target="_blank">Live Site</a>
+            <a href="https:\\eandspowersystemsolutions.com" target="_blank">Live Site</a>
+        </div>
+        <div class="container">
             <div class="project-info">
                 <div class="text-content">
                     <h2>Project Info</h2>
                     <p>E&S Power System Solutions is a local solar energy company. They have been in operation for over 10 years and has never had a website.</p>
-                    <p>I designed, built and hosted their website to assist with their online marketing and to help them stand out among their competitors. I will also be providing SEO marketing and search indexing to bring traffic to the site. </p>
-                    <h3>Tools used:</h3>
+                    <p>I designed, built and hosted their website to support their online marketing efforts and to set them apart from competitors. Additionally, I will be offering SEO marketing services and optimize search engine indexing to boost traffic to their website.</p>
+                    <h3>Built with:</h3>
                     <ul>
                         <li>HTML & CSS</li>
                         <li>SASS</li>
                         <li>Bootstrap</li>
-                        <li>ASP.Net Core</li>
+                        <li>.Net Core Razor Pages</li>
                         <li>Entity Framework Core</li>
+                        <li>Email Client</li>
                         <li>GSAP</li>
                         <li>Git</li>
                     </ul>
@@ -58,33 +61,45 @@
         </section>  
         <section class="challenges">
             <div class="container">
-                <div class="challenges">
-                    <div class="screenshot-container">
-                        <img src="/assets/solution-files.png" alt="">
-                    </div>
+                <h2>Challenges</h2>
+                        <img src="/assets/challenge.png" alt="">
                     <div class="text-content">
-                        <h2>Challenges</h2>
                        <p>While building this application, these are some of the challenges I faced:</p> 
                        <ul>
                             <li>
-                                <h4>Hosting:</h4>
-                                <p>This was my very first time publishing and hosting a .Net Core application so I had difficulties figuring out the steps I needed to take.</p>
-                                <p>In Visual Studio, after doing my research and watching YouTube videos, I decided to follow the method of publishing the files to a folder and then upload said files to the hosting provider. After doing this, I expected the aspplication to run, but it didn't. After watching a YouTube video one morning, I realized the the person published their app while the application was running on IIS. I decided to do the same. I republished the application, reuploaded the files and it worked!</p>
+                                <h3>Hosting:</h3>
+                                <p>Inexperienced in publishing and hosting a .Net Core application, I encountered difficulties understanding the required steps.</p>
+                                <p>Initially, I published the files to a folder and uploaded them to the hosting provider, expecting the application to run. However, it did not. After seeking guidance from online resources, I tried publishing the application while running on IIS, following which, the application successfully ran.</p>
                             </li>
                             <li>
-                                <h4>Database integration:</h4>
-                                <p>After publishing and uploading the application files to the hosting server, I had difficulties connecting the database to the hosting provider's database. Eventually I got to the point where I was able to connect to the hosting provider's database sever using SQL Server Management Studio; however, whenever I tried to update my database locally, I kept getting an error which took me quite some time to figure out. In the end I realized that my connection string did not have the correct info and that's what was causing the error. After fixing my connection string, I was able to get the database working.</p>
+                                <h3>Database integration:</h3>
+                                <p>Connecting the application to the hosting provider's database posed challenges post-publishing. Despite successfully connecting to the database server via SQL Server Management Studio, updating the database locally resulted in persistent errors.</p>
+                                <p>Resolving the issue, I discovered an incorrect connection string as the root cause, rectifying which enabled proper database functionality.</p>
                             </li>
                             <li>
-                                <h4>Email Client:</h4>
-                                <p>The process of setting up an email client using SMTP did not go as smoothly as I had hoped. After couple hours, I was able to get things working.</p>
+                                <h3>Email Client:</h3>
+                                <p>Configuring an email client using Google's SMTP proved to be more time-consuming than expected. After dedicated efforts and troubleshooting for a few hours, I eventually succeeded in setting up a functional email client.</p>
                             </li>
                         </ul>  
                     </div>
-                </div>
             </div>
         </section>
-   
+        <section class="summary">
+            <div class="container">
+                <div class="text-content">
+                    <h2>Summary and Reflections</h2>
+                    <p>Reflecting on these challenges, not only have I learnt a lot but I have gained valuable insights into the importance of thorough research, proper configuration, and persistence in troubleshooting to overcome obstacles encountered during website development.</p>    
+                </div>
+               <a href="#">Back to top</a>
+            </div>
+        </section>
+        <footer>
+            <p>Made with 💗 by Sashana Farrier.</p>
+            <p>&copy; 2024</p>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
