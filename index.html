@@ -104,7 +104,7 @@
                                 <h4>Technical Skills</h4>
                                 <ul>
                                     <li>C#</li>
-                                    <li>C</li>
+                                    <!-- <li>C</li> -->
                                     <li>JavaScript</li>
                                     <li>.Net Core</li>
                                     <li>Razor Pages</li>
@@ -112,7 +112,8 @@
                                     <li>HTML</li>
                                     <li>CSS/Sass/Bootstrap</li>
                                     <li>Git</li>
-                                    <li>Mailkit</li>
+                                    <!-- <li>Mailkit</li> -->
+                                    <li>Webpack</li>
                                 </ul> 
                             </div> 
                         </div>
@@ -135,26 +136,26 @@
                             <h4>E&S Power System Solutions</h4>
                         </div>
                             <img src="./assets/mockup-1.png" alt="project image">
-                            <p>E&S Power System Solutions is a local solar energy company. I built their website from scratch, including design using .Net Core.</p>
+                            <p>E&S Power System Solutions is a local solar energy company. I designed and built their website from scratch, using .Net Core.</p>
                             <a class="case-study-btn" href="/case-study-1.html">Case Study</a>
                     </div>
-                    <div class="work-2">
+                    <!-- <div class="work-2">
                         <div class="header">
                             <span>02</span>
                             <h4>Remote Konnect</h4>
                         </div>
                             <img src="./assets/password-generator.jpg" alt="">
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, consequuntur! Expedita amet excepturi nemo molestias in! Eaque molestiae dicta exercitationem voluptatem sed consectetur esse ducimus, nesciunt repellendus quis minus hic!</p>
-                    </div>
-                    <div class="work-3">
+                    </div> -->
+                    <div class="work-2">
                         <div class="header">
-                            <span>03</span>
+                            <span>02</span>
                             <h4>Personal Website</h4>
                         </div>
                         <div class="img-container">
                              <img src="./assets/personal website mockup.png" alt=""> 
                         </div>
-                            <p>This is the second iteration of my personal  website that I build in 2024. It's a simple, reponsive one-pager designed and developed with a conscious effort to showcase my frontend skills.
+                            <p>This is the second iteration of my personal website that I build in 2024. It's a simple, reponsive website designed and developed with a conscious effort to showcase my frontend skills.
                             </p>
                     </div>
                 </div>
@@ -167,19 +168,21 @@
                 <h3>Get in Touch</h3>
                 <p>Looking to work together or just want to say hi?</p>
                 <p>Feel free to send me a message</p>
-                <form action="">
+                <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="20a1f5c0-0703-406e-bb31-19523e70a5e4">
                     <div class="form-wrapper">
+                        <!-- <input type="hidden" name="redirect" value="https://yourwebsite.com/thanks.html"> -->
                         <div class="details">
                             <label for="name">Name</label>
-                            <input type="text" name="name" id="name">
+                            <input type="text" name="name" id="name" required>
                         </div>
                         <div class="details">
                             <label for="email">Email</label>
-                            <input type="email" name="email" id="email">
+                            <input type="email" name="email" id="email" required>
                         </div>
                         <div class="details textarea-container">
                             <label for="message">Message</label>
-                            <textarea name="message" id="message" placeholder="I'd love to hear from you..."></textarea>
+                            <textarea name="message" id="message" placeholder="I'd love to hear from you..." required></textarea>
                         </div>
                         <button>Send message</button>
                     </div>
