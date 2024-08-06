@@ -1,0 +1,193 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+    --black: #000000;
+    --white: #ffffff;
+    --accent-1: #6b63fe;
+    --accent-2: #8a53fb;
+
+    /* spacers */
+
+    --spacer-sm: .5em;
+    --spacer-md: 1em;
+    --spacer-lg: 2em;
+    --spacer-xl: 4em;
+    --spacer-xxl: 6em;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  scroll-behavior: smooth;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+    font-family: "ADLaM Display", Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+.header-bar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 5px;
+    background-color: var(--accent-1);
+    border-radius: 2px;
+    z-index: 999;
+    /* transition: width .2s ease; */
+}
+
+header {
+    background-color: var(--black);
+    height: 10vh;
+    overflow: hidden;
+    z-index: 100;
+    transition: all .2s ease;
+}
+
+.header-content,
+.header-content ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-content ul {
+    
+    gap: var(--spacer-md);
+    display: none;
+}
+
+.header-content ul > li {
+    position: relative;
+}
+
+.header-content ul > li::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    top: 100%;
+    margin-inline: auto;
+    width: 100%;
+    height: 2px;
+    transform: scale(0);
+    background-color: var(--accent-1);
+    transition: transform  ease .2s;
+}
+
+.header-content ul > li:hover::after {
+    transform: scale(1);
+    transform-origin: center;
+}
+
+@media screen and (min-width: 800px) {
+    .header-content ul {
+        display: flex;
+    }
+
+    .hamburger {
+        display: none;
+    }
+   
+}
+
+header a {
+    text-decoration: none;
+    color: var(--white) !important;
+}
+
+header .logo {
+    width: 120px;
+    margin-top: -30px;
+    /* background-color: red; */
+}
+
+header .hamburger {
+    color: var(--white);
+}
+
+footer {
+  color: var(--white);
+  text-align: center;
+  padding: var(--spacer-lg);
+  background-color: var(--black);
+}
+
+footer p {
+  font-size: 1rem !important;
+  margin: 0px;
+}
+
+/* utilities */
+.container{
+    width: 85%;
+    max-width: 1440px;
+    margin-inline: auto;
+}
+
+.grid-section {
+    display: grid;
+    place-items: center;
+}
