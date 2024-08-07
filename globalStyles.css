@@ -100,24 +100,32 @@ textarea:not([rows]) {
 }
 
 header {
+  position: relative;
     background-color: var(--black);
     height: 10vh;
-    overflow: hidden;
+    /* overflow: hidden; */
     z-index: 100;
     transition: all .2s ease;
 }
 
-.header-content,
-.header-content ul {
+header .container,
+header .header-content {
+  height: 100%
+}
+
+.header-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
 .header-content ul {
-    
-    gap: var(--spacer-md);
     display: none;
+    position: absolute;
+    text-align: right;
+    right: 5%;
+    top: 100%;
+    gap: var(--spacer-md);
 }
 
 .header-content ul > li {
@@ -145,6 +153,10 @@ header {
 @media screen and (min-width: 800px) {
     .header-content ul {
         display: flex;
+        align-items: center;
+        justify-content: space-between;
+        top: 50%;
+        transform: translateY(-50%);
     }
 
     .hamburger {
