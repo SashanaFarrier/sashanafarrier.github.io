@@ -11,9 +11,11 @@ document.addEventListener('DOMContentLoaded', function() {
      
         let newWidth;
       if(scrollPercentage > 0) {
-        newWidth = initialWidth * (1 - scrollPercentage);
+            const ULs = Array.from(document.querySelectorAll("header ul"));
+            ULs.forEach(ul => ul.style.display = "none");
+            newWidth = initialWidth * (1 - scrollPercentage);
       } else {
-        newWidth = initialWidth * (1 + scrollPercentage);
+            newWidth = initialWidth * (1 + scrollPercentage);
       }
 
       headerBar.style.width = newWidth + 'px';
