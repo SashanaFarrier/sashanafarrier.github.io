@@ -163,7 +163,7 @@ section.about {
 }
 
 .about .content {
-    max-width: 150ch;
+    max-width: 100ch;
 }
 
 .about .content > p + p {
