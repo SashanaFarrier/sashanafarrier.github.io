@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskApp Case Study</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="caseStudyStyles.css">
+    <link rel="stylesheet" href="globalStyles.css">
+</head>
+<body>
+    <div class="header-bar"></div>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="./index.html">
+                        <img src="./assets/my-logo.png" alt="logo">
+                    </a>
+                </div>
+                <div class="hamburger">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <ul role="list">
+                    <li><a href="/index.html#about">About</a></li>
+                    <li><a href="/index.html#credentials">Credentials</a></li>
+                    <li><a href="/index.html#projects">Projects</a></li>
+                    <li><a href="/index.html#contact">Contact</a></li>
+                </ul>  
+            </div>
+        </div>
+    </header>
+       <section>
+        <div class="project-title">
+            <h1>TaskApp<span>.</span></h1>
+            <a href="http://taskapp.us-east-1.elasticbeanstalk.com/" target="_blank">Live Site</a>
+        </div>
+        <div class="container">
+            <div class="project-info">
+                <div class="text-content">
+                    <h2>Project Info</h2>
+                    <p> This is a task management CRUD application. Once registered, users are able to create and manage tasks to stay organized. Features include:
+                        <ol role="list">
+                            <li>A dashboard feature that displays the number of tasks assigned for the week. Of those weekly tasks, users are able to see how many have been completed and how many are still overdue. They are also able to view any task that has been assigned for the present day.</li>
+                            <li>A tasklist feature where users can create new tasks. Tasks are separated into different categories either by default or when their status has been updated. Users can also perform search or filter operations when looking for particular tasks.</li>
+                            <li>A tasks overview feature where users can view recently added tasks, task due for the present day and week, along with their respective due dates.</li>
+                            <li>A calendar feature where users can view dates. Here they can also click on the date of any particular month to create a task that will be due on that specific day.</li>
+                            <li>A settings feature where users can update their personal information such as name, email address and password. Here they can also choose to delete their account.</li>
+                            <li>A logout feature that once clicked, immediately logs the user out of their account.</li>
+                        </ol>
+                        <p><strong>DEMO LOGIN:</strong>
+                            <br>
+                             Email: fiona@gmail.com
+                             <br>
+                             Password: Test123!
+                        </p>
+                    </p>
+                    <!-- <p>I designed, built and hosted this application on AWS Elastic Beanstalk.</p> -->
+                    <h3>Built with:</h3>
+                    <ul>
+                        <li>HTML & CSS</li>
+                        <li>.Net Core Razor Pages</li>
+                        <li>Entity Framework Core</li>
+                        <li>.Net Core Identity</li>
+                        <li>JavaScript</li>
+                        <li>Git</li>
+                        <li>Webpack</li>
+                        <li>AWS Elastic Beanstalk</li>
+                        <li>AWS RDS</li>
+                    </ul>
+                </div>
+              <div class="mockup-container">
+                <img src="/assets/mockup-2.transparent-bg.png" alt="">
+            </div>   
+            </div>
+           
+        </div>
+        </section>  
+        <section class="challenges">
+            <div class="container">
+                <h2>Challenges</h2>
+                        <img src="/assets/challenge.png" alt="">
+                    <div class="text-content">
+                       <p>While building this application, these are some of the challenges I faced:</p> 
+                       <ul>
+                            <li>
+                                <h3>Multi Filtering Feature:</h3>
+                                <p>Though I'm quite compfortable working with JavaScript, using it to implement a multi-filtering feature proved quite challenging that expected.</p>
+                                <p>This was my thought process: I needed to account for every instance where a filter operation is being performed. For instance, if filtering by category, check if priority and date options have been selected. If no other filter options were selected, return all tasks for that category. Else if a priority was already selected, return only tasks within the selected category that matches that priority. Else if date was already selected, return only tasks within the selected category that matches that date range. Else if both priority and date were already selected, return only tasks within that category that matches both the priority and the date range.
+                                <div class="code-samples">
+                                    <img src="./assets/code/categoryFilter.png" alt="">
+                                    <img src="./assets/code/categoryAndPriorityFilter.png" alt="">
+                                    <img src="./assets/code/categoryAndDateFilter.png" alt="">
+                                    <img src="./assets/code/categoryPriorityAndDateFilter.png" alt="">
+                                </div>
+                            </li>
+                            <li>
+                                <h3>AWS Elastic Beanstalk:</h3>
+                                <p>As this was my first interaction with Elastic Beanstalk, I initially encountered some issues when trying to deploy my application due to some missing policies I didn't know I needed. However, after exensive research, I was able to successfully deploy my application.</p>
+                            </li>
+                            <li>
+                                <h3>AWS RDS:</h3>
+                                <p>I had difficulty connecting to the RDS MSSQL database that I had created. I realized later that the main issue was because I never understood what I was doing but was trying to do it anyway. After watching a YouTube tutorial, I adjusted my RDS database settings by making changes to the attached security group's inbound rules and also making the database publicly accessible so I could connect locally.</p>
+                            </li>
+                        </ul>  
+                    </div>
+            </div>
+        </section>
+        <section class="summary">
+            <div class="container">
+                <div class="text-content">
+                    <h2>Summary and Reflections</h2>
+                    <p>Reflecting on these challenges, not only have I learnt a lot but I have gained valuable insights into the importance of thorough research, proper configuration, and persistence in troubleshooting to overcome obstacles encountered while building this app. I plan to continue working on this app to improve to improve it's functionalities, especially relating to user authentication and authorization.</p>    
+                </div>
+               <a href="#">Back to top</a>
+            </div>
+        </section>
+        <footer>
+            <p>Made with 💗 by Sashana Farrier.</p>
+            <p>&copy; 2024</p>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
