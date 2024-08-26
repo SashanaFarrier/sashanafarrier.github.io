@@ -96,6 +96,17 @@ ul {
     border-radius: 5px;
 }
 
+.project-info ol > li {
+    padding: var(--spacer-sm);
+    
+}
+
+.project-info ol > li::marker {
+    content: "✅";
+  } 
+    
+
+
 .challenges,
 .summary {
     margin-block: var(--spacer-xl);
@@ -115,9 +126,12 @@ ul {
 .challenges img { 
     margin-block: var(--spacer-lg);
     height: 100%;
-    max-height: 600px;
     width: 100%;
     object-fit: cover;
+}
+
+.challenges img:not(.code-samples img) { 
+    max-height: 600px;
 }
 
 .summary a {

@@ -96,17 +96,6 @@ section.hero {
     }
 }
 
-/* .hero::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    max-width: 150px;
-    background-image: radial-gradient(var(--accent-1), var(--accent-2));
-    border-radius: 50%;
-    filter: blur(150px);
-    opacity: 0.5;
-} */
-
 .code-img-container {
     width: min(300px, 100%);
     position: relative;
@@ -163,7 +152,7 @@ section.about {
 }
 
 .about .content {
-    max-width: 150ch;
+    max-width: 100ch;
 }
 
 .about .content > p + p {
@@ -274,6 +263,9 @@ section.credentials .skills {
 .work .header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+    width: 100%;
     margin-bottom: var(--spacer-md);
 }
 
@@ -294,6 +286,16 @@ section.credentials .skills {
 
 .work-wrapper > * {
     margin-bottom: var(--spacer-xl);
+}
+
+.project-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.project-details .content {
+    flex-grow: 1;
 }
 
 .case-study-btn {
@@ -325,11 +327,6 @@ section.credentials .skills {
     position: absolute;
     inset: 0;
     background: radial-gradient(circle, rgba(107, 99, 254, 1) 0%, rgba(138, 83, 251, 1) 38%, rgba(0, 0, 0, 1) 100%);
-    /* width: 50%;
-    height: 50%;
-    background-image: radial-gradient(var(--accent-1), var(--accent-2));
-    border-radius: 50%;
-    filter: blur(250px); */
     opacity: 0.15;
     z-index: -1;
 }
