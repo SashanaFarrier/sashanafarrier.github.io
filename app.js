@@ -1,6 +1,5 @@
 gsap.registerPlugin(gsap);
 
-
 document.addEventListener('DOMContentLoaded', function() {
     const headerBar = document.querySelector(".header-bar");
     const header = document.querySelector("header");
@@ -31,15 +30,6 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
-
-// const observer = new IntersectionObserver(entries => {
-//   entries.forEach(entry => {
-//     const intersecting = entry.isIntersecting
-//     entry.target.style.backgroundColor = intersecting ? "blue" : "orange"
-//   })
-// })
-
-// observer.observe(document.querySelector(".grid-section"))
 
 //reset form after submission
     window.onload = function() {
