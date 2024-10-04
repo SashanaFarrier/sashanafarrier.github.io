@@ -205,6 +205,33 @@ section.credentials .skills {
     justify-content: space-between;
 }
 
+section.credentials .skills {
+    gap: 3em;
+    flex-direction: column;
+}
+
+section.credentials .skills h4 {
+    margin-block: 2em;
+}
+
+@media screen and (min-width: 650px) {
+    section.credentials .skills {
+        flex-direction: row;
+    } 
+
+
+    section.credentials .skills .non-tech-skills {
+        width: 40%;
+    }
+
+
+    section.credentials .skills .tech-skills {
+        width: 50%;
+    }
+
+
+}
+
 .credentials .skills ul {
     font-weight: bold;
     display: flex;
