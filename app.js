@@ -1,4 +1,4 @@
-gsap.registerPlugin(gsap);
+gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener('DOMContentLoaded', function() {
     const headerBar = document.querySelector(".header-bar");
@@ -37,33 +37,64 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById("contact-form").reset();
     };
 
-    const tl = gsap.timeline();
+    // const tl = gsap.timeline({duration: 1});
+    const tl = gsap.timeline({
+      defaults: {
+        transition: 'ease 0.2s',
+        duration: 0.2,
+      },
+    });
 
     const hamburgerMenus = Array.from(document.querySelectorAll(".hamburger"));
     hamburgerMenus.forEach(icon => {
       icon.addEventListener("click", (e)=> {
       const UL = e.currentTarget.parentElement.querySelector("ul");
-      if(UL.style.display == "block") {
+      if(UL.style.display == "flex") {
         UL.style.display = "none"
       } else {
-          UL.style.display = "block";
-          const LIs = Array.from(UL.querySelectorAll("li"))
-          
-          LIs.forEach((li, index) => {
-            tl.fromTo(li, {
-              opacity: 0,
-              y: 0
-            }, {
-              ease: "bounce.out",
-              opacity: 1,
-              y: 10,
-              duration: 0.2, 
-              delay: index * 0.1 
-            });
+        tl.to(UL, {
+          x: "-10%",
+          y: 20,
+          duration: 0.5,
+          onStart: () => {
+            UL.style.display = "flex";
+            
+          }
         });
+        
+          // const LIs = Array.from(UL.querySelectorAll("li"))
+             
+        //   LIs.forEach((li, index) => {
+        //     tl.fromTo(li, {
+        //       opacity: 0,
+        //       y: 0
+        //     }, {
+        //       ease: "bounce.out",
+        //       opacity: 1,
+        //       y: 10,
+        //       duration: 0.2, 
+        //       delay: index * 0.1 
+        //     });
+        // });
       }
      
    
     });
 
     });
+
+// pin sections
+const sections = gsap.utils.toArray(document.getElementsByTagName("section"));
+  
+sections.forEach((section, i) => {
+  section.style.zIndex = i;
+  ScrollTrigger.create({
+    trigger: section,
+    start: () => section.offsetHeight < window.innerHeight ? "top top" : "bottom bottom", // if it's shorter than the viewport, we prefer to pin it at the top
+    pin: true, 
+    pinSpacing: false 
+  });
+});
+
+
+

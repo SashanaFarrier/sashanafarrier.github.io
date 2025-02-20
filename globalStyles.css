@@ -178,6 +178,8 @@ header .logo {
 
 header .hamburger {
     color: var(--white);
+    padding: var(--spacer-sm);
+    cursor: pointer;
 }
 
 footer {
