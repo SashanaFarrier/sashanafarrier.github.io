@@ -1,4 +1,3 @@
-
 section {
     font-size: 1rem;
     color: var(--white);
@@ -20,7 +19,6 @@ section p {
 
 section.hero {
     height: 90vh;
-    /* overflow-y: visible; */
     z-index: 99;
     background: linear-gradient(122deg, rgba(107, 99, 254, 1) 0%, rgba(138, 83, 251, 1) 5%, rgba(0, 0, 0, 1) 20%);
 }
@@ -37,19 +35,13 @@ section.hero {
     font-size: clamp(2rem, 3rem + 4vw, 10rem);
     display: inline-block;
     line-height: .9;
-    /* margin-left: calc(.5em + 5vw); */
     margin-top: var(--spacer-sm);
 
 }
 
 .hero h1.accent {
-    /* display: inline-block; */
     color: var(--accent-1);
 }
-
-/* .hero h1 span > .accent {
-    color: var(--accent-2);
-} */
 
 .hero .headline-text {
     margin-top: 1em;
@@ -111,24 +103,30 @@ section.hero {
         }
 
     .watermark {
-        /* font-weight: bold; */
-        font-size: clamp(.5rem, 1rem + 2vw, 3rem);
+        font-size: clamp(.5rem, .5rem + 2vw, 1.5rem);
         text-transform: uppercase;
         writing-mode: vertical-rl;
-        opacity: 0.1;
-        border: 1px solid black;
+        color: var(--accent-2);
+        opacity: 0.2;
+        /* border: 1px solid black; */
         width: 100%;
+        animation: blink 3s ease infinite;
         /* height: 100% */
 
     }
 
     }
+}
 
-   
+@keyframes blink {
+    from { filter: blur(5px)}
+    to {
+        /* opacity: 0.5; */
+        filter: blur(0px)
+    }
 }
 
 .code-img {
-    /* margin-top: calc(-2em - 2vw); */
     position: absolute;
     right: calc(-10em + 2vw);
     bottom: calc(-20em + 2vw);
@@ -149,10 +147,6 @@ section.hero {
 section.about {
     min-height: 90vh;
     isolation: isolate;
-}
-
-.about .content {
-    max-width: 100ch;
 }
 
 .about .content > p + p {
@@ -232,57 +226,56 @@ section.credentials .skills h4 {
 
 }
 
-.credentials .skills ul {
-    font-weight: bold;
+#about .content {
     display: flex;
-    color: var(--black);
-    list-style: none;
-    gap: var(--spacer-md);
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacer-xl);
 }
-
-.credentials .skills ul > li {
-    --accent-1: rgba(107, 99, 254);
-    --accent-2: rgb(138, 83, 251);
-    padding: var(--spacer-sm);
-    margin-bottom: var(--spacer-sm);
-    max-width: max-content;
-    background-color: var(--white);
-    border-radius: .5em;
-    box-shadow: rgba(138, 83, 251, 0.4) -5px 5px, rgba(138, 83, 251, 0.3) -10px 10px, rgba(138, 83, 251, 0.2) -15px 15px, rgba(138, 83, 251, 0.1) -20px 20px, rgba(138, 83, 251, 0.05) -25px 25px;
-}
-
-.skills, .education {
-    padding-block: var(--spacer-md);
-    border-top: 1px solid var(--white);
-    border-bottom: 1px solid var(--white);
-}
-
-.skills {
-    border-bottom: none;
-}
-
-.education ul, .skills-wrapper {
-    width: 50%;
-    margin-bottom: var(--spacer-lg);
-}
-
-.skills-wrapper {
-    line-height: 1;
-}
-
-.skills-wrapper .tech-skills {
-    margin-top: var(--spacer-lg);
-
-    @media screen and (min-width: 430px) {
-        margin-top: var(--spacer-xl);
+@media  screen and (min-width: 997px) {
+    #about .content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: var(--spacer-xl);
     }
 }
 
-.skills-wrapper .tech-skills > h4 {
-    font-size: clamp(1rem, 1rem + 1vw, 3rem);
-    color: var(--accent-2);
-    margin-bottom: var(--spacer-sm);
+
+#about .left-col {
+    flex-basis: 45%;
+}
+
+#about .right-col {
+    flex-basis: 40%;
+    padding: var(--spacer-lg);
+    border: 1px solid var(--accent-2);
+    border-radius: 1vw;
+}
+
+#about .right-col::after {
+    content: "";
+    position: absolute; 
+    inset: 0;
+    right: 0;
+    background: radial-gradient(circle, rgba(107, 99, 254, 1) 0%, rgba(138, 83, 251, 1) 38%, rgba(0, 0, 0, 1) 100%);
+    opacity: 0.15;
+    z-index: -1;
+}
+
+#about .right-col ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: flex-end; */
+    gap: var(--spacer-md);
+    margin-top: var(--spacer-lg);
+}
+
+#about .right-col ul > li {
+    border: 1px solid var(--accent-1);
+    padding: var(--spacer-md);
+    border-radius: .5vw;
 }
 
 /* work section */
@@ -335,7 +328,6 @@ section.credentials .skills h4 {
 
 .contact {
     text-align: center;
-    /* gap: var(--spacer-md); */
     min-height: 100vh;
     isolation: isolate;
 
@@ -422,12 +414,9 @@ form input:focus {
 }
 
 .contact .textarea-container {
-   
-    /* padding-block: var(--spacer-lg); */
     textarea {
         color: var(--white);
         width: 100%;
-        /* height: 100%; */
       
         padding: var(--spacer-md);
         background-color: transparent;
@@ -438,7 +427,6 @@ form input:focus {
 
     textarea:focus {
         outline: 1px solid var(--accent-1);
-        /* min-height: 100%; */
         box-shadow: 
           inset 0px 0px 8px var(--accent-2), 
           inset 0px 0px 8px var(--accent-1);
