@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 // pin sections
-const sections = gsap.utils.toArray(document.getElementsByTagName("section"));
+const sections = gsap.utils.toArray(document.getElementsByClassName("pinned-section"));
   
 sections.forEach((section, i) => {
   section.style.zIndex = i;
