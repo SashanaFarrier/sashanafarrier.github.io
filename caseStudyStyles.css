@@ -89,7 +89,7 @@ ul {
     max-width: 400px;
 }
 
-.project-info ul > li {
+/* .project-info ul > li {
     color: var(--white);
     padding: var(--spacer-sm);
     background-color: var(--accent-2);
@@ -99,13 +99,22 @@ ul {
 .project-info ol > li {
     padding: var(--spacer-sm);
     
+} */
+
+.project-overview ul {
+    margin-left: 3em;
 }
 
-.project-info ol > li::marker {
+
+.project-overview ul > li {
+    font-size: 1.25rem;
+    margin-bottom: 1em;
+}
+
+.project-overview ul > li::marker {
     content: "✅";
   } 
     
-
 
 .challenges,
 .summary {
@@ -119,9 +128,9 @@ ul {
 
 }
 
-.challenges .text-content {
+/* .challenges .text-content {
     max-width: 1100px;
-}
+} */
 
 .challenges img { 
     margin-block: var(--spacer-lg);

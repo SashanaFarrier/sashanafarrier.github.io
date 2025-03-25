@@ -35,86 +35,55 @@
     </header>
        <section>
         <div class="project-title">
-            <h1>TaskApp<span>.</span></h1>
+            <h1>Task Management Web Application<span>.</span></h1>
             <!-- <a href="http://taskapp.us-east-1.elasticbeanstalk.com/" target="_blank">Live Site</a> -->
-            <a href="https://taskapp-manager.online/" target="_blank">Live Site</a>
+            <a href="https://github.com/SashanaFarrier/TodoApp" target="_blank">View Code</a>
         </div>
         <div class="container">
             <div class="project-info">
                 <div class="text-content">
-                    <h2>Project Info</h2>
-                    <p> This is a task management CRUD application. Once registered, users are able to create and manage tasks to stay organized. Features include:
-                        <ol role="list">
-                            <li>A dashboard feature that displays the number of tasks assigned for the week. Of those weekly tasks, users are able to see how many have been completed and how many are still overdue. They are also able to view any task that has been assigned for the present day.</li>
-                            <li>A tasklist feature where users can create new tasks. Tasks are separated into different categories either by default or when their status has been updated. Users can also perform search or filter operations when looking for particular tasks.</li>
-                            <li>A tasks overview feature where users can view recently added tasks, task due for the present day and week, along with their respective due dates.</li>
-                            <li>A calendar feature where users can view dates. Here they can also click on the date of any particular month to create a task that will be due on that specific day.</li>
-                            <li>A settings feature where users can update their personal information such as name, email address and password. Here they can also choose to delete their account.</li>
-                            <li>A logout feature that once clicked, immediately logs the user out of their account.</li>
-                        </ol>
-                        <p><strong>DEMO LOGIN:</strong>
-                            <br>
-                             Email: fionafarrier@gmail.com
-                             <br>
-                             Password: Test123!
-                        </p>
-                    </p>
-                    <!-- <p>I designed, built and hosted this application on AWS Elastic Beanstalk.</p> -->
-                    <h3>Built with:</h3>
-                    <ul>
-                        <li>HTML & CSS</li>
-                        <li>.Net Core Razor Pages</li>
-                        <li>Entity Framework Core</li>
-                        <li>.Net Core Identity</li>
-                        <li>JavaScript</li>
-                        <li>Git</li>
-                        <li>Webpack</li>
-                        <li>SQL Server</li>
-                        <li>DigitalOcean</li>
-                    </ul>
+                    <!-- <h2>Project Info</h2> -->
+                     <h2>Introduction: The Problem</h2>
+                     <p>Many individuals struggle with managing their daily tasks efficiently. Without an organized system, it’s easy to miss deadlines, forget important assignments, or become overwhelmed by an increasing workload. This task management application was built to help users stay on track by providing an intuitive way to create, manage, and categorize tasks.</p>
                 </div>
               <div class="mockup-container">
                 <img src="/assets/mockup-2.transparent-bg.png" alt="">
             </div>   
             </div>
-           
+           <div class="project-overview">
+            <div class="text-content">
+                <h2>Project Overview: The Solution</h2>
+                <p>This application is a task management CRUD system designed to help users stay organized. After registering, users can create, update, and delete tasks while categorizing them based on their progress. Key features include:</p>
+            
+               <ul>
+                   <li><strong>Dashboard: </strong>Displays an overview of assigned tasks for the week, including completed, overdue, and tasks due the current day.</li>
+                   <li><strong>Task Panel: </strong>Allows users to create new tasks, which are categorized by status. Includes search and filtering options.</li>
+                   <li><strong>Task Overview: </strong>Provides a summary of recently added tasks, along with due dates.</li>
+                   <li><strong>Calendar: </strong>Enables users to view upcoming tasks. Users can also create new tasks by adding it to the calendar.</li>
+                   <li><strong>Settings: </strong>Allows users to update their name, email, and password, as well as delete their account.</li>
+                   <li><strong>Logout: </strong>Allows users to logout of their account.</li>
+               </ul>
+               <p>This system ensures users can track their responsibilities effectively, reducing stress and improving productivity.</p>
+            </div>
+           </div>
         </div>
         </section>  
         <section class="challenges">
             <div class="container">
-                <h2>Challenges</h2>
+                <h2>Challenges & Solutions</h2>
                         <img src="/assets/challenge.png" alt="">
                     <div class="text-content">
-                       <p>While building this application, these are some of the challenges I faced:</p> 
-                       <ul>
-                            <li>
-                                <h3>Multi Filtering Feature:</h3>
-                                <p>Though I'm quite compfortable working with JavaScript, using it to implement a multi-filtering feature proved quite challenging that expected.</p>
-                                <p>This was my thought process: I needed to account for every instance where a filter operation is being performed. For instance, if filtering by category, check if priority and date options have been selected. If no other filter options were selected, return all tasks for that category. Else if a priority was already selected, return only tasks within the selected category that matches that priority. Else if date was already selected, return only tasks within the selected category that matches that date range. Else if both priority and date were already selected, return only tasks within that category that matches both the priority and the date range.
-                                <div class="code-samples">
-                                    <img src="./assets/code/categoryFilter.png" alt="">
-                                    <img src="./assets/code/categoryAndPriorityFilter.png" alt="">
-                                    <img src="./assets/code/categoryAndDateFilter.png" alt="">
-                                    <img src="./assets/code/categoryPriorityAndDateFilter.png" alt="">
-                                </div>
-                            </li>
-                            <!-- <li>
-                                <h3>AWS Elastic Beanstalk:</h3>
-                                <p>As this was my first interaction with Elastic Beanstalk, I initially encountered some issues when trying to deploy my application due to some missing policies I didn't know I needed. However, after exensive research, I was able to successfully deploy my application.</p>
-                            </li>
-                            <li>
-                                <h3>AWS RDS:</h3>
-                                <p>I had difficulty connecting to the RDS MSSQL database that I had created. I realized later that the main issue was because I never understood what I was doing but was trying to do it anyway. After watching a YouTube tutorial, I adjusted my RDS database settings by making changes to the attached security group's inbound rules and also making the database publicly accessible so I could connect locally.</p>
-                            </li> -->
-                        </ul>  
+                       <p>Initially, I built the application using Razor Pages, but I later realized that using the MVC (Model-View-Controller) pattern would have been a better approach. MVC provides a clearer separation between the data (Model), business logic (Controller), and presentation (View), making the application more maintainable and scalable.</p> 
+                       <p>If I were to rebuild this app, I would implement MVC to improve code organization and allow for easier future enhancements.</p>
                     </div>
             </div>
         </section>
         <section class="summary">
             <div class="container">
                 <div class="text-content">
-                    <h2>Summary and Reflections</h2>
-                    <p>Reflecting on these challenges, not only have I learnt a lot but I have gained valuable insights into the importance of thorough research, proper configuration, and persistence in troubleshooting to overcome obstacles encountered while building this app. I plan to continue working on this app to to improve it's functionalities, especially relating to user authentication and authorization.</p>    
+                    <h2>Results & Impact</h2>
+                    <p>Through this project, I refined my problem-solving skills and logical thinking.</p>    
+                    <p>This application provides users with a structured way to manage tasks, ensuring deadlines are met and priorities are organized. The insights gained from this project will help me build even more advanced applications in the future. As I continue refining this project, my goal is to create an even more powerful task management tool that enhances productivity for users.</p>
                 </div>
                <a href="#">Back to top</a>
             </div>
