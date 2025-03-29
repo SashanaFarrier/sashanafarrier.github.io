@@ -101,17 +101,32 @@ ul {
     
 } */
 
-.project-overview ul {
+.project-overview h3,
+.summary h2 {
+    margin-bottom: 1em;
+}
+
+.summary .conclusion {
+    margin-top: 1em;
+}
+
+.project-overview ul,
+.challenges ul,
+.summary ul {
     margin-left: 3em;
 }
 
 
-.project-overview ul > li {
+.project-overview ul > li,
+.challenges ul > li,
+.summary ul > li {
     font-size: 1.25rem;
     margin-bottom: 1em;
 }
 
-.project-overview ul > li::marker {
+.project-overview ul > li::marker,
+.challenges ul > li::marker,
+.summary ul > li::marker {
     content: "✅";
   } 
     

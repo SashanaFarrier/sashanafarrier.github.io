@@ -90,7 +90,7 @@ sections.forEach((section, i) => {
   section.style.zIndex = i;
   ScrollTrigger.create({
     trigger: section,
-    start: () => section.offsetHeight < window.innerHeight ? "top top" : "bottom bottom", // if it's shorter than the viewport, we prefer to pin it at the top
+    start: () => section.offsetHeight < window.innerHeight ? "top top" : "bottom bottom", // if it's shorter than the viewport, pin it at the top
     pin: true, 
     pinSpacing: false 
   });
