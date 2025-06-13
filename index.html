@@ -15,6 +15,21 @@
     <div class="header-bar"></div>
     <header>
         <div class="container">
+            <div class="flex-container justify-between items-center">
+                 <div class="logo">
+                    <a href="./index.html">
+                        <img src="./assets/my-logo.png" alt="logo">
+                    </a>
+                </div>
+                <ul role="list" class="flex-container">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>  
+            </div>
+        </div>
+        <!-- <div class="container">
             <div class="header-content">
                 <div class="logo">
                     <a href="./index.html">
@@ -31,11 +46,24 @@
                     <li><a href="#contact">Contact</a></li>
                 </ul>  
             </div>
-        </div>
+        </div> -->
     </header>
     <section class="hero grid-section | pinned-section">
         <div class="container">
             <div class="content-wrapper">
+                <p>Hey, I'm Sashana</p>
+                <h1>.NET Developer | Frontend Enthusiast</h1>
+                <p>I build modern, scalable web applications using C#, ASP.NET Core, and clean frontend code. Let's create something powerful together.</p>
+                 <!-- <div class="code-img-container">
+                    <div class="watermark-container">
+                        <p class="watermark">I design and build web solutions.</p> 
+                    </div>
+                    <div class="code-img">
+                        <img src="./assets/code.png" alt="">
+                    </div>
+                </div> -->
+            </div>
+            <!-- <div class="content-wrapper">
                 <div class="content">
                     <p>Software Engineer</p>
                     <h1 class="accent">Sashana Farrier.</h1>
@@ -55,7 +83,7 @@
                     </div>
                 </div>
                 
-            </div>
+            </div> -->
         </div>
     </section>
     <section id="about" class="about grid-section | pinned-section">
@@ -63,9 +91,11 @@
             <div class="content">
                 <div class="left-col">
                     <h2>About Me</h2>
-                <p>My journey into coding began when I first attempted to build a website from scratch. What started as curiosity quickly grew into a passion, leading me to land my first Software Engineer internship through the <a href="https://jamaica.loopnews.com/content/first-cohort-immersed-microsoft-leap-service" target="_blank"> Microsoft Leap as a Service Programme</a>.</p>
-                <p>I've since worked as a WordPress Web Designer, customizing WordPress themes to perfectly align with our clients' unique brands, ensuring their websites are both visually appealing and functional.</p>
-                <p>Through continuous learning and hands-on projects, I’ve sharpened my development skills—now, I channel that knowledge into freelance work, building solutions that drive real value.</p>
+                    <p>I'm Sashana, a passionate developer with a love for both frontend design and backend logic. I specialize in creating clean, responsive user interfaces using HTML, CSS, JavaScript, and Vue.js, and building robust web applications with C# and ASP.NET Core. I also work with content management systems like WordPress to deliver flexible, user-friendly websites. </p>
+                    <p>Whether it’s crafting a sleek UI, developing scalable backend features, or customizing CMS platforms, I enjoy turning ideas into powerful digital experiences.</p>
+                <!-- <p>My journey into coding began when I first attempted to build a website from scratch. What started as curiosity quickly grew into a passion, leading me to land my first Software Engineer internship through the <a href="https://jamaica.loopnews.com/content/first-cohort-immersed-microsoft-leap-service" target="_blank"> Microsoft Leap as a Service Programme</a>.</p> -->
+                <!-- <p>I've since worked as a WordPress Web Designer, customizing WordPress themes to perfectly align with our clients' unique brands, ensuring their websites are both visually appealing and functional.</p> -->
+                <!-- <p>Through continuous learning and hands-on projects, I’ve sharpened my development skills—now, I channel that knowledge into freelance work, building solutions that drive real value.</p> -->
                 <!-- <p>While I’ve spent most of my time mastering frontend development, my current focus is on strengthening my backend skills, particularly with .NET Core and Entity Framework Core.</p>
                 <p>When I’m not coding, you’ll probably find me watching K-dramas, playing video games, or enjoying anime with my husband.</p> -->
                 </div>
@@ -88,6 +118,7 @@
                             <li>Git</li>
                             <li>Webpack</li>
                             <li>WordPress (Elementor, BeBuilder)</li>
+                            <li>Webflow</li>
                         </ul> 
                     </div>
                 </div>
@@ -99,46 +130,6 @@
             <img src="./assets/plant.png" alt="">
         </div>
     </section>
-    <!-- <section id="skills" class="credentials grid-section">
-        <div class="container">
-            <div class="content">
-                <h2>Skills</h2>
-                <div class="details">
-                    <div class="skills">
-                        <div class="non-tech-skills">
-                            <h4>Non-tech Skills</h4>
-                            <ul>
-                                <li>Communication</li>
-                                <li>Teamwork</li>
-                                <li>Problem solving</li>
-                            </ul> 
-                        </div>
-                        <div class="tech-skills">
-                            <h4>Tech Skills</h4>
-                            <ul>
-                                <li>C#</li>
-                                <li>JavaScript</li>
-                                <li>.Net Core</li>
-                                <li>MVC</li>
-                                <li>Razor Pages</li>
-                                <li>Entity Framework Core</li>
-                                <li>SQL</li>
-                                <li>HTML</li>
-                                <li>CSS/Sass/Bootstrap</li>
-                                <li>Vue.js</li>
-                                <li>Git</li>
-                                <li>Webpack</li>
-                                <li>WordPress (Elementor, BeBuilder)</li>
-                            </ul> 
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="flower-img">
-            <img src="./assets/plant.png" alt="">
-        </div>
-    </section> -->
     <section id="projects" class="work | pinned-section">
         <div class="container">
             <div class="content">
@@ -149,36 +140,53 @@
                             <span>01</span>
                             <h4>E&S Power System Solutions</h4>
                         </div>
-                            <img src="./assets/mockup-1.jpg" alt="project image">
+                        <div class="project-info">
+                             <a class="case-study-btn" href="/https://eandspowersystemsolutions.com/" target="_blank">
+                             <img src="./assets/mockup-1.jpg" alt="project image">
+                         </a>
                             <div class="content">
-                                <p>E&S Power System Solutions is a local solar energy company. I designed and built their website from scratch, using .Net Core.</p>
+                                <p>Built with HTML, CSS, Bootstrap, .Net Core razor pages.</p>
                             </div>
-                            <a class="case-study-btn" href="/case-study-1.html">Case Study</a>
+                        </div>
+                        
+                            <!-- <a class="case-study-btn" href="/case-study-1.html">Case Study</a> -->
+                             <!-- <a class="case-study-btn" href="/https://eandspowersystemsolutions.com/" target="_blank">View Site</a> -->
                     </div>
                     <div id="work-2" class="project-details">
                         <div class="header">
                             <span>02</span>
                             <h4>VantaBlack Technologies</h4>
                         </div>
-                        <div class="img-container">
-                             <img src="./assets/mockup-3.png" alt=""> 
-                        </div>
+                        <div class="project-info">
+                            <a class="case-study-btn" href="https://www.vbtechja.com/" target="_blank">
+                                 <img src="./assets/mockup-2.jpg" alt=""> 
+                            </a>
                         <div class="content">
-                            <p>Built with a clean and minimalist approach, this site adapts seamlessly across devices, ensuring an optimal user experience on both desktop and mobile. The design and layout were carefully crafted to reflect the client's brand.
+                            <p>Built with HTML, CSS, Vue.js.
                             </p>
                         </div>
-                        <a class="case-study-btn" href="/case-study-3.html">Case Study</a>
+                        </div>
+                            
+                        <!-- <a class="case-study-btn" href="/case-study-3.html">Case Study</a> -->
+                             <!-- <a class="case-study-btn" href="https://www.vbtechja.com/" target="_blank">Case Study</a> -->
                     </div>
                     <div id="work-3" class="project-details">
                         <div class="header">
                             <span>03</span>
                             <h4>Task Manager</h4>
                         </div>
-                            <img src="./assets/mockup-2.jpg" alt="">
+                        <div class="project-info">
+                            <a class="case-study-btn" href="https://github.com/SashanaFarrier/TodoApp" target="_blank">
+                                <img src="./assets/mockup-3.jpg" alt="">
+                             </a>
+                            
                             <div class="content">
-                                <p>Stay organized by creating tasks. Utilize search and filter capabilities for quick access. Gain a comprehensive overview of your tasks with curated lists such as recently created tasks, tasks due today, and overdue tasks.</p>
+                                <p>Built with HTML, CSS, Bootstrap, .Net Core, Entity Framework Core</p>
                             </div>
-                            <a class="case-study-btn" href="/case-study-2.html">Case Study</a>
+                        </div>
+                             
+                            <!-- <a class="case-study-btn" href="/case-study-2.html">Case Study</a> -->
+                             <!-- <a class="case-study-btn" href="https://github.com/SashanaFarrier/TodoApp" target="_blank">View on GitHub</a> -->
                     </div>
                 </div>
             </div>

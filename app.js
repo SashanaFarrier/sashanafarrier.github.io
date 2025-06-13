@@ -38,63 +38,50 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     // const tl = gsap.timeline({duration: 1});
-    const tl = gsap.timeline({
-      defaults: {
-        transition: 'ease 0.2s',
-        duration: 0.2,
-      },
-    });
+    // const tl = gsap.timeline({
+    //   defaults: {
+    //     transition: 'ease 0.2s',
+    //     duration: 0.2,
+    //   },
+    // });
 
-    const hamburgerMenus = Array.from(document.querySelectorAll(".hamburger"));
-    hamburgerMenus.forEach(icon => {
-      icon.addEventListener("click", (e)=> {
-      const UL = e.currentTarget.parentElement.querySelector("ul");
-      if(UL.style.display == "flex") {
-        UL.style.display = "none"
-      } else {
-        tl.to(UL, {
-          x: "-10%",
-          y: 20,
-          duration: 0.5,
-          onStart: () => {
-            UL.style.display = "flex";
+    // const hamburgerMenus = Array.from(document.querySelectorAll(".hamburger"));
+    // hamburgerMenus.forEach(icon => {
+    //   icon.addEventListener("click", (e)=> {
+    //   const UL = e.currentTarget.parentElement.querySelector("ul");
+    //   if(UL.style.display == "flex") {
+    //     UL.style.display = "none"
+    //   } else {
+    //     tl.to(UL, {
+    //       x: "-10%",
+    //       y: 20,
+    //       duration: 0.5,
+    //       onStart: () => {
+    //         UL.style.display = "flex";
             
-          }
-        });
+    //       }
+    //     });
         
-          // const LIs = Array.from(UL.querySelectorAll("li"))
-             
-        //   LIs.forEach((li, index) => {
-        //     tl.fromTo(li, {
-        //       opacity: 0,
-        //       y: 0
-        //     }, {
-        //       ease: "bounce.out",
-        //       opacity: 1,
-        //       y: 10,
-        //       duration: 0.2, 
-        //       delay: index * 0.1 
-        //     });
-        // });
-      }
+        
+    //   }
      
    
-    });
+    // });
 
-    });
+  //  });
 
 // pin sections
-const sections = gsap.utils.toArray(document.getElementsByClassName("pinned-section"));
+// const sections = gsap.utils.toArray(document.getElementsByClassName("pinned-section"));
   
-sections.forEach((section, i) => {
-  section.style.zIndex = i;
-  ScrollTrigger.create({
-    trigger: section,
-    start: () => section.offsetHeight < window.innerHeight ? "top top" : "bottom bottom", // if it's shorter than the viewport, pin it at the top
-    pin: true, 
-    pinSpacing: false 
-  });
-});
+// sections.forEach((section, i) => {
+//   section.style.zIndex = i;
+//   ScrollTrigger.create({
+//     trigger: section,
+//     start: () => section.offsetHeight < window.innerHeight ? "top top" : "bottom bottom", // if it's shorter than the viewport, pin it at the top
+//     pin: true, 
+//     pinSpacing: false 
+//   });
+// });
 
 
 

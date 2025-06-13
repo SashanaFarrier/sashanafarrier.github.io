@@ -15,11 +15,11 @@
 
     /* spacers */
 
-    --spacer-sm: .5em;
-    --spacer-md: 1em;
-    --spacer-lg: 2em;
-    --spacer-xl: 4em;
-    --spacer-xxl: 6em;
+    --spacer-sm: .5rem;
+    --spacer-md: 1rem;
+    --spacer-lg: 2rem;
+    --spacer-xl: 4rem;
+    --spacer-xxl: 6rem;
 }
 
 /* Prevent font size inflation */
@@ -100,40 +100,43 @@ textarea:not([rows]) {
     /* transition: width .2s ease; */
 }
 
+
+
 header {
-  position: relative;
+  padding-block: var(--spacer-lg);
+  /* position: relative; */
     background-color: var(--black);
-    height: 10vh;
+    /* height: 10vh; */
     /* overflow: hidden; */
-    z-index: 100;
-    transition: all .2s ease;
+    /* z-index: 100; */
+    /* transition: all .2s ease; */
 }
 
-header .container,
+/* header .container,
 header .header-content {
   height: 100%
-}
+} */
 
-.header-content {
+/* .header-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
+} */
 
-.header-content ul {
+/* .header-content ul {
     display: none;
     position: absolute;
     text-align: right;
     right: 5%;
     top: 100%;
     gap: var(--spacer-md);
-}
+} */
 
-.header-content ul > li {
+/* .header-content ul > li {
     position: relative;
-}
+} */
 
-.header-content ul > li::after {
+/* .header-content ul > li::after {
     content: "";
     position: absolute;
     inset: 0;
@@ -144,21 +147,21 @@ header .header-content {
     transform: scale(0);
     background-color: var(--accent-1);
     transition: transform  ease .2s;
-}
+} */
 
-.header-content ul > li:hover::after {
+/* .header-content ul > li:hover::after {
     transform: scale(1);
     transform-origin: center;
-}
+} */
 
 @media screen and (min-width: 800px) {
-    .header-content ul {
+    /* .header-content ul {
         display: flex !important;
         align-items: center;
         justify-content: space-between;
         top: 50%;
         transform: translateY(-50%);
-    }
+    } */
 
     .hamburger {
         display: none;
@@ -169,18 +172,19 @@ header .header-content {
 header a {
     text-decoration: none;
     color: var(--white) !important;
+    padding-block: 2rem;
 }
 
 header .logo {
-    width: 120px;
-    margin-top: -30px;
+    /* width: 120px; */
+    /* margin-top: -30px; */
 }
 
-header .hamburger {
+/* header .hamburger {
     color: var(--white);
     padding: var(--spacer-sm);
     cursor: pointer;
-}
+} */
 
 footer {
   color: var(--white);
@@ -204,4 +208,16 @@ footer p {
 .grid-section {
     display: grid;
     place-items: center;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.items-center {
+  align-items: center;
 }
