@@ -21,12 +21,23 @@
                         <img src="./assets/my-logo.png" alt="logo">
                     </a>
                 </div>
-                <ul role="list" class="flex-container">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>  
+                <nav role="navigation">
+                    <ul class="flex-container">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="https://github.com/SashanaFarrier" target="_blank">GitHub</a></li>
+                    </ul>  
+                </nav>
+                <div class="menu-icons">
+                   <div class="hamburger">
+                    <i class="fa-solid fa-bars"></i>
+                </div>  
+                <div class="close">
+                     <i class="fa-solid fa-close"></i>
+                </div>
+                </div>
+                
             </div>
         </div>
         <!-- <div class="container">
@@ -51,9 +62,14 @@
     <section class="hero grid-section | pinned-section">
         <div class="container">
             <div class="content-wrapper">
-                <p>Hey, I'm Sashana</p>
+                <p class="accent">Hey, I'm Sashana</p>
                 <h1>.NET Developer | Frontend Enthusiast</h1>
                 <p>I build modern, scalable web applications using C#, ASP.NET Core, and clean frontend code. Let's create something powerful together.</p>
+                 <div class="cta">
+                                <span>&#x7b;</span>
+                                <a href="#projects" class="get-in-touch-btn">Get in touch</a>
+                                <span>&#x7d;</span>
+                            </div>
                  <!-- <div class="code-img-container">
                     <div class="watermark-container">
                         <p class="watermark">I design and build web solutions.</p> 
@@ -93,11 +109,6 @@
                     <h2>About Me</h2>
                     <p>I'm Sashana, a passionate developer with a love for both frontend design and backend logic. I specialize in creating clean, responsive user interfaces using HTML, CSS, JavaScript, and Vue.js, and building robust web applications with C# and ASP.NET Core. I also work with content management systems like WordPress to deliver flexible, user-friendly websites. </p>
                     <p>Whether it’s crafting a sleek UI, developing scalable backend features, or customizing CMS platforms, I enjoy turning ideas into powerful digital experiences.</p>
-                <!-- <p>My journey into coding began when I first attempted to build a website from scratch. What started as curiosity quickly grew into a passion, leading me to land my first Software Engineer internship through the <a href="https://jamaica.loopnews.com/content/first-cohort-immersed-microsoft-leap-service" target="_blank"> Microsoft Leap as a Service Programme</a>.</p> -->
-                <!-- <p>I've since worked as a WordPress Web Designer, customizing WordPress themes to perfectly align with our clients' unique brands, ensuring their websites are both visually appealing and functional.</p> -->
-                <!-- <p>Through continuous learning and hands-on projects, I’ve sharpened my development skills—now, I channel that knowledge into freelance work, building solutions that drive real value.</p> -->
-                <!-- <p>While I’ve spent most of my time mastering frontend development, my current focus is on strengthening my backend skills, particularly with .NET Core and Entity Framework Core.</p>
-                <p>When I’m not coding, you’ll probably find me watching K-dramas, playing video games, or enjoying anime with my husband.</p> -->
                 </div>
                 <div id="skills" class="right-col">
                     <h3>Skills</h3>
@@ -133,7 +144,7 @@
     <section id="projects" class="work | pinned-section">
         <div class="container">
             <div class="content">
-                <h2>Recent Work</h2>
+                <h2>Projects</h2>
                 <div class="work-wrapper">
                     <div id="work-1" class="project-details">
                         <div class="header">
@@ -141,16 +152,16 @@
                             <h4>E&S Power System Solutions</h4>
                         </div>
                         <div class="project-info">
-                             <a class="case-study-btn" href="/https://eandspowersystemsolutions.com/" target="_blank">
-                             <img src="./assets/mockup-1.jpg" alt="project image">
-                         </a>
-                            <div class="content">
+                            <div class="face front">
+                                <a href="https://eandspowersystemsolutions.com/" target="_blank">
+                                    <img src="./assets/mockup-1.jpg" alt="project image">
+                                </a>  
+                            </div>
+                            <div class="face back">
                                 <p>Built with HTML, CSS, Bootstrap, .Net Core razor pages.</p>
+                                <a class="btn" href="https://eandspowersystemsolutions.com/" target="_blank">View site</a>
                             </div>
                         </div>
-                        
-                            <!-- <a class="case-study-btn" href="/case-study-1.html">Case Study</a> -->
-                             <!-- <a class="case-study-btn" href="/https://eandspowersystemsolutions.com/" target="_blank">View Site</a> -->
                     </div>
                     <div id="work-2" class="project-details">
                         <div class="header">
@@ -158,13 +169,15 @@
                             <h4>VantaBlack Technologies</h4>
                         </div>
                         <div class="project-info">
-                            <a class="case-study-btn" href="https://www.vbtechja.com/" target="_blank">
-                                 <img src="./assets/mockup-2.jpg" alt=""> 
-                            </a>
-                        <div class="content">
-                            <p>Built with HTML, CSS, Vue.js.
-                            </p>
-                        </div>
+                            <div class="face front">
+                                <a href="https://www.vbtechja.com/" target="_blank">
+                                    <img src="./assets/mockup-2.jpg" alt=""> 
+                                </a>
+                            </div>
+                           <div class="face back">
+                                <p>Built with HTML, CSS, Vue.js.</p>
+                                <a class="btn" href="https://www.vbtechja.com/" target="_blank">View site</a>
+                           </div>
                         </div>
                             
                         <!-- <a class="case-study-btn" href="/case-study-3.html">Case Study</a> -->
@@ -176,13 +189,16 @@
                             <h4>Task Manager</h4>
                         </div>
                         <div class="project-info">
-                            <a class="case-study-btn" href="https://github.com/SashanaFarrier/TodoApp" target="_blank">
-                                <img src="./assets/mockup-3.jpg" alt="">
-                             </a>
-                            
-                            <div class="content">
-                                <p>Built with HTML, CSS, Bootstrap, .Net Core, Entity Framework Core</p>
+                            <div class="face front">
+                                <a href="https://github.com/SashanaFarrier/TodoApp" target="_blank">
+                                    <img src="./assets/mockup-3.jpg" alt="">
+                                </a>  
                             </div>
+                           <div class="face back">
+                                <p>Built with HTML, CSS, Bootstrap, .Net Core, Entity Framework Core</p>
+                                <a class="btn" href="https://github.com/SashanaFarrier/TodoApp" target="_blank">View on GitHub</a>
+                           </div>
+                            
                         </div>
                              
                             <!-- <a class="case-study-btn" href="/case-study-2.html">Case Study</a> -->
@@ -214,7 +230,7 @@
                             <label for="message">Message</label>
                             <textarea name="message" id="message" placeholder="I'd love to hear from you..." required></textarea>
                         </div>
-                        <button>Send message</button>
+                        <button class="btn" type="submit">Send message</button>
                     </div>
                 </form>
             </div>

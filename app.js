@@ -1,8 +1,18 @@
 gsap.registerPlugin(ScrollTrigger);
 
+const header = document.querySelector("header");
+const hamburgerMenu = document.querySelector(".hamburger");
+const nav = document.querySelector("nav");
+const closeMenu = document.querySelector(".close")
+const LIs = Array.from(header.getElementsByTagName("li"));
+let isActive = false;
+
+hamburgerMenu.addEventListener("click", toggleNav);
+closeMenu.addEventListener("click", toggleNav);
+
 document.addEventListener('DOMContentLoaded', function() {
     const headerBar = document.querySelector(".header-bar");
-    const header = document.querySelector("header");
+    
     var initialWidth = header.clientWidth;
   
     window.addEventListener('scroll', function() {
@@ -11,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
         let newWidth;
       if(scrollPercentage > 0) {
         const ULs = Array.from(document.querySelectorAll("header ul"));
-        ULs.forEach(ul => ul.style.display = "none")
+        // ULs.forEach(ul => ul.style.display = "none")
         newWidth = initialWidth * (1 - scrollPercentage);
       } else {
         newWidth = initialWidth * (1 + scrollPercentage);
@@ -33,55 +43,25 @@ document.addEventListener('DOMContentLoaded', function() {
 
 //reset form after submission
     window.onload = function() {
-        // Reset the form fields when the page loads
         document.getElementById("contact-form").reset();
+        console.log(header)
     };
 
-    // const tl = gsap.timeline({duration: 1});
-    // const tl = gsap.timeline({
-    //   defaults: {
-    //     transition: 'ease 0.2s',
-    //     duration: 0.2,
-    //   },
-    // });
+function toggleNav() {
+  isActive = !isActive;
 
-    // const hamburgerMenus = Array.from(document.querySelectorAll(".hamburger"));
-    // hamburgerMenus.forEach(icon => {
-    //   icon.addEventListener("click", (e)=> {
-    //   const UL = e.currentTarget.parentElement.querySelector("ul");
-    //   if(UL.style.display == "flex") {
-    //     UL.style.display = "none"
-    //   } else {
-    //     tl.to(UL, {
-    //       x: "-10%",
-    //       y: 20,
-    //       duration: 0.5,
-    //       onStart: () => {
-    //         UL.style.display = "flex";
-            
-    //       }
-    //     });
-        
-        
-    //   }
-     
-   
-    // });
+  if(isActive) {
+    nav.classList.add("active");
+    document.body.style.overflowY = "hidden";
+  } else {
+    nav.classList.remove("active");
+    document.body.style.overflowY = "scroll";
+  }
+}
 
-  //  });
+LIs.forEach(el => el.addEventListener("click", () => {
+  nav.classList.remove("active");
+  document.body.style.overflowY = "scroll";
+}))
 
-// pin sections
-// const sections = gsap.utils.toArray(document.getElementsByClassName("pinned-section"));
-  
-// sections.forEach((section, i) => {
-//   section.style.zIndex = i;
-//   ScrollTrigger.create({
-//     trigger: section,
-//     start: () => section.offsetHeight < window.innerHeight ? "top top" : "bottom bottom", // if it's shorter than the viewport, pin it at the top
-//     pin: true, 
-//     pinSpacing: false 
-//   });
-// });
-
-
-
+    

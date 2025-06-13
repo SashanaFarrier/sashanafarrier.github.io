@@ -31,8 +31,8 @@ html {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
+ul,
+ol {
   list-style: none;
 }
 
@@ -63,9 +63,13 @@ p {
 /* A elements that don't have a class get default styles */
 a:not([class]) {
   text-decoration-skip-ink: auto;
-  color: currentColor;
 }
 
+a, button {
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+}
 /* Make images easier to work with */
 img,
 picture {
@@ -87,115 +91,6 @@ textarea:not([rows]) {
 /* Anything that has been anchored to should have extra scroll margin */
 :target {
   scroll-margin-block: 5ex;
-}
-
-.header-bar {
-    position: sticky;
-    top: 0;
-    width: 100%;
-    height: 5px;
-    background-color: var(--accent-1);
-    border-radius: 2px;
-    z-index: 999;
-    /* transition: width .2s ease; */
-}
-
-
-
-header {
-  padding-block: var(--spacer-lg);
-  /* position: relative; */
-    background-color: var(--black);
-    /* height: 10vh; */
-    /* overflow: hidden; */
-    /* z-index: 100; */
-    /* transition: all .2s ease; */
-}
-
-/* header .container,
-header .header-content {
-  height: 100%
-} */
-
-/* .header-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-} */
-
-/* .header-content ul {
-    display: none;
-    position: absolute;
-    text-align: right;
-    right: 5%;
-    top: 100%;
-    gap: var(--spacer-md);
-} */
-
-/* .header-content ul > li {
-    position: relative;
-} */
-
-/* .header-content ul > li::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    top: 100%;
-    margin-inline: auto;
-    width: 100%;
-    height: 2px;
-    transform: scale(0);
-    background-color: var(--accent-1);
-    transition: transform  ease .2s;
-} */
-
-/* .header-content ul > li:hover::after {
-    transform: scale(1);
-    transform-origin: center;
-} */
-
-@media screen and (min-width: 800px) {
-    /* .header-content ul {
-        display: flex !important;
-        align-items: center;
-        justify-content: space-between;
-        top: 50%;
-        transform: translateY(-50%);
-    } */
-
-    .hamburger {
-        display: none;
-    }
-   
-}
-
-header a {
-    text-decoration: none;
-    color: var(--white) !important;
-    padding-block: 2rem;
-}
-
-header .logo {
-    /* width: 120px; */
-    /* margin-top: -30px; */
-}
-
-/* header .hamburger {
-    color: var(--white);
-    padding: var(--spacer-sm);
-    cursor: pointer;
-} */
-
-footer {
-  color: var(--white);
-  text-align: center;
-  padding: var(--spacer-lg);
-  background-color: var(--black);
-}
-
-footer p {
-  font-size: 1rem !important;
-  margin: 0px;
 }
 
 /* utilities */
@@ -220,4 +115,23 @@ footer p {
 
 .items-center {
   align-items: center;
+}
+
+.btn {
+    display: inline-block;
+    color: var(--white);
+    text-decoration: none;
+    padding: var(--spacer-sm);
+    margin-top: var(--spacer-md);
+    background-color: var(--black);
+    transition: all 500ms ease-in;
+}
+
+.btn:hover {
+    color: var(--black);
+    background-color: var(--white);
+}
+
+ .accent {
+    color: var(--accent-2);
 }
